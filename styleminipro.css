@@ -1,0 +1,126 @@
+*{
+    margin: 0; /*for remove all the default padding from whole code , for getting clean slate */
+    padding:0;
+    font-family: "Poppins", serif;
+}
+.main_box{
+    background: url("photo.jpg");
+    height: 100vh; /* it occupies 100% hight and width of total document or page */
+    background-size: cover;
+}
+.btn_one{
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 15px;
+    line-height: 50px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.sidebar_menu{
+    position: fixed;
+    left: -300px; /*it is used to hide all nav menu from screen */
+    height: 100vh;
+    width: 300px;
+    background-color: rgb(255, 255, 255,0.05); /* we set 0.1 in alpha channel to decrease its opacity */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s linear;
+}
+.sidebar_menu .logo {
+    position: absolute;
+    width: 100%;
+    height: 60px ;
+    line-height: 60px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.766);
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 50px;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar_menu .btn_two i {
+    color: gray;
+    font-size: 20px;
+    position: absolute;
+    line-height: 60px;
+    left: 275px;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.sidebar_menu .menu {
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+.sidebar_menu .menu li {
+    margin-top: 6px;
+    padding: 15px 20px;
+}
+
+.sidebar_menu .menu i,a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size:20px ;
+}
+
+.sidebar_menu .menu i {
+    padding-right: 10px;
+}
+
+.sidebar_menu .social_media {
+    color: aliceblue;
+    opacity: 0.5;
+    position: absolute;    /* we set absolute position because it is associated with its parent class */
+    left:25% ;  
+    bottom: 50px;
+}
+.sidebar_menu .social_media i { 
+    color: aliceblue;
+    opacity: 0.5;
+    padding: 0 5px ;
+}
+
+#check {
+    display: none;   /* ye use karne se jitni bhi jagha reserver kar rakhi thi screen par us element ke according vo hat jayegi */
+
+}
+
+.sidebar_menu .menu li:hover {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.btn_one:hover {
+    font-size: 35px;
+}
+
+.btn_two:hover i {
+    font-size: 22px;
+    color: white;
+}
+
+.sidebar_menu .social_media i:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    color: white;
+}
+
+#check:checked ~ .sidebar_menu{
+    left: 0;
+}
+
+#check:checked ~ .btn_one i {
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_two i {
+    opacity: 1;
+}
